@@ -1,0 +1,83 @@
+body {
+  background-image: url(BgTexture.png);
+  background-repeat: repeat;
+  background-size: 545px;
+  overflow: scroll; 
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Wrapper uses relative positioning so children can be anchored to the image */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Responsive image: scales to screen width */
+#homepageart {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text overlay: anchored to the image */
+.text-overlay {
+  position: absolute;
+  top: 60%; /* vertical placement relative to image height */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+
+.contacttext {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  padding-bottom: 40px;
+}
+
+.notetext {
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-size: 14px;
+  text-decoration: none !important;
+  padding-bottom: 4px
+}
+
+#link {
+     color: #bce2a4;
+     text-decoration: none;
+}
+
+
+@media screen and (max-width: 816px) {
+  .text-overlay {
+    top: 92%;
+  }
+
+  .contacttext {
+    font-size: 20px;
+    padding-bottom: 12px;
+  }
+
+  .notetext {
+    font-size: 12px;
+    padding: 20px;
+    padding-bottom: 4px;
+  }
+}
